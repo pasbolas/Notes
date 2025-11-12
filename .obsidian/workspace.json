@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Second_Year/OS/week 9.md",
+                "file": "Second_Year/oop/Encapsulation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "week 9"
+              "title": "Encapsulation"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "a3e9772e4f285176",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Second_Year/OS/week 9.md",
+                "file": "Second_Year/oop/Encapsulation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for week 9"
+              "title": "Backlinks for Encapsulation"
             }
           },
           {
@@ -114,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Second_Year/OS/week 9.md",
+                "file": "Second_Year/oop/Encapsulation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from week 9"
+              "title": "Outgoing links from Encapsulation"
             }
           },
           {
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Second_Year/OS/week 9.md",
+                "file": "Second_Year/oop/Encapsulation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of week 9"
+              "title": "Outline of Encapsulation"
             }
           }
         ]
@@ -170,8 +169,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "e7e9a24077ca968c",
+  "active": "f0bf7551b471418b",
   "lastOpenFiles": [
+    "Second_Year/oop/Labs/week9/src/week9/LibraryApp.java",
+    "Second_Year/oop/Labs/week9/src/week9/Library.java",
+    "Second_Year/oop/Labs/week9/src/week9/LibraryItem.java",
+    "Second_Year/oop/Labs/week9/src/week9/Borrowable.java",
+    "Second_Year/oop/Labs/week9/src/week9/Book.java",
+    "Second_Year/oop/Labs/week9/src/week9",
+    "Second_Year/oop/Labs/week9/src",
+    "Second_Year/oop/Labs/week9",
+    "Second_Year/oop/Labs/week8/week8/src/week8",
+    "Second_Year/oop/Labs/week8/week8/src/module-info.java",
+    "Second_Year/oop/Labs/week8/week8/src",
     "Second_Year/OS/week 9.md"
   ]
 }
