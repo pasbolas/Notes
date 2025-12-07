@@ -12,28 +12,26 @@ int cnt = 0;
 /* declare a semaphore */ 
 sem_t  mutex;
 
-void * Count(void * a)
+void *Count(void * a)
 {
     int i, tmp;
-
     int t = (long)a; 
 
     /* lock the mutex */
-
-  //  printf(" about to block the mutex\n");
+    //  printf(" about to block the mutex\n");
 
     sem_wait(&mutex);
 
     printf(" the mutex is now locked by thread %d \n", t);				
     for(i = 0; i < NITER; i++)
     {
-       
-		
-	tmp = cnt;      /* copy the global cnt locally */
+  
+
+	      tmp = cnt;      /* copy the global cnt locally */
         tmp = tmp+1;    /* increment the local copy */
         cnt = tmp;      /* store the local value into the global cnt */ 
 		
-		
+
     }
 	
 	printf("unlocking the mutex\n");
@@ -44,8 +42,7 @@ void * Count(void * a)
 	
 	/* code to exit a thread correctly */ 
 	pthread_exit( NULL );
-	
-        return NULL;
+  return NULL;
 }
 
 int main(int argc, char * argv[])

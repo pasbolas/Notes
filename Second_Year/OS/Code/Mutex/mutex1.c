@@ -21,6 +21,7 @@ When a thread terminates, the mutex does not unless explicitly unlocked. Nothing
 */
 
 void *functionC();
+
 pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
 int  counter = 0;
 
