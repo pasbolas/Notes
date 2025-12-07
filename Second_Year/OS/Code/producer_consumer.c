@@ -27,7 +27,7 @@ void *producer(void *arg)
         pthread_mutex_unlock(&mutex);
         sem_post(&full);
 
-        usleep(1500000);
+        usleep(100000);
     }
     return NULL;
 }

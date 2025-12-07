@@ -13,24 +13,29 @@ void  ParentProcess(void);               /* parent process prototype */
 void  main(void)
 {
      pid_t  pid;
+     int status;
 
      pid = fork();
+
+     
      if (pid == 0) 
           ChildProcess();
      else 
-	 {
+     {
           ParentProcess();
-		  pid = wait(&status);
-		  printf("the parent has been woken by process %d\n", pid);
-	 }	  
+          pid = wait(&status);
+          printf("the parent has been woken by process %d\n", pid);
+     }	  
 }
 
 void  ChildProcess(void)
 {
      int   i;
-
      for (i = 1; i <= MAX_COUNT; i++)
+     {
           printf("   This line is from child, value = %d\n", i);
+     }
+          
      printf("   *** Child process is done ***\n");
 }
 
@@ -40,6 +45,8 @@ void  ParentProcess(void)
 
 		 
      for (i = 1; i <= MAX_COUNT; i++)
+     {
           printf("This line is from parent, value = %d\n", i);
+     };    
      printf("*** Parent is done ***\n");
 }
