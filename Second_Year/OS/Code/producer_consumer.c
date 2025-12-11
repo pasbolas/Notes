@@ -1,74 +1,146 @@
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
 
-#define BUFFER_SIZE 5
+#define BUFF_SIZE 10
 
-int buffer[BUFFER_SIZE];
-int in = 0, out = 0;
+char buffer[BUFF_SIZE];
+int producerIndex = 0;
+int consumerIndex = 0;
 
-pthread_mutex_t mutex;
-sem_t empty, full;
+int Times;
 
-void *producer(void *arg)
+// Semaphores
+sem_t EmptyPositions;   // counts empty slots
+sem_t FullPositions;    // counts full slots
+sem_t BufferLock;       // mutex for buffer
+
+// ---------------------------------------------------
+//          INSERT FUNCTION  (PRODUCER)
+// ---------------------------------------------------
+void Insert(char item)
 {
-    for (int item = 1; item <= 10; item++) 
+    printf("Producing %c ...\n", item);
+
+    // P operations
+    sem_wait(&EmptyPositions);   // wait for an empty slot
+    sem_wait(&BufferLock);       // lock buffer
+
+    // critical section
+    buffer[producerIndex] = item;
+
+    // increment producer index circularly
+    producerIndex = (producerIndex + 1) % BUFF_SIZE;
+
+    // V operations
+    sem_post(&BufferLock);       // unlock buffer
+    sem_post(&FullPositions);    // signal a full slot
+}
+
+// ---------------------------------------------------
+//          PRODUCER THREAD
+// ---------------------------------------------------
+void* Prod(void* t)
+{
+    int i;
+
+    for (i = 0; i < Times; i++)
     {
-
-        sem_wait(&empty); // takes 1 away from the empty count 
-        pthread_mutex_lock(&mutex);
-
-        buffer[in] = item;
-        printf("Produced %d at %d\n", item, in);
-        in = (in + 1) % BUFFER_SIZE;
-
-        pthread_mutex_unlock(&mutex);
-        sem_post(&full);
-
-        usleep(100000);
+        Insert((char)('A' + (i % 26)));
     }
+
+    pthread_exit(NULL);
     return NULL;
 }
 
-void *consumer(void *arg)
+// ---------------------------------------------------
+//          DELETE FUNCTION (CONSUMER)
+// ---------------------------------------------------
+void Delete()
 {
-    for (int i = 1; i <= 10; i++) {
+    char item;
 
-        sem_wait(&full); // removes 1 from the full count
+    // P operations
+    sem_wait(&FullPositions);    // wait for available item
+    sem_wait(&BufferLock);       // lock buffer
 
-        pthread_mutex_lock(&mutex);
+    // critical section
+    item = buffer[consumerIndex];
 
-        int item = buffer[out];
-        printf("Consumed %d from %d\n", item, out);
-        out = (out + 1) % BUFFER_SIZE;
+    // increment consumer index circularly
+    consumerIndex = (consumerIndex + 1) % BUFF_SIZE;
 
-        pthread_mutex_unlock(&mutex);
-        sem_post(&empty);
+    // V operations
+    sem_post(&BufferLock);       // unlock buffer
+    sem_post(&EmptyPositions);   // signal an empty slot
 
-        usleep(1500000);
+    printf("Consuming letter %c ...\n", item);
+}
+
+// ---------------------------------------------------
+//          CONSUMER THREAD
+// ---------------------------------------------------
+void* Consume(void* t)
+{
+    int i;
+    for (i = 0; i < Times; i++)
+    {
+        Delete();
     }
+
+    pthread_exit(NULL);
     return NULL;
 }
 
-int main()
+// ---------------------------------------------------
+//          MAIN PROGRAM
+// ---------------------------------------------------
+int main(int argc, char** argv)
 {
-    pthread_t p, c;
+    pthread_t idP, idC;
+    int rc1, rc2;
 
-    pthread_mutex_init(&mutex, NULL);
-    sem_init(&empty, 0, BUFFER_SIZE);
-    sem_init(&full, 0, 0);
+    // check CLI args
+    if (argc < 2)
+    {
+        printf("Usage: %s <Times>\n", argv[0]);
+        exit(1);
+    }
 
-    pthread_create(&p, NULL, producer, NULL);
-    pthread_create(&c, NULL, consumer, NULL);
+    Times = atoi(argv[1]);
 
-    pthread_join(p, NULL);
-    pthread_join(c, NULL);
+    // init semaphores
+    sem_init(&EmptyPositions, 0, BUFF_SIZE); // buffer empty initially
+    sem_init(&FullPositions, 0, 0);
+    sem_init(&BufferLock, 0, 1);
 
-    pthread_mutex_destroy(&mutex);
-    sem_destroy(&empty);
-    sem_destroy(&full);
+    // create producer thread
+    rc1 = pthread_create(&idP, NULL, Prod, NULL);
+    if (rc1)
+    {
+        printf("Thread creation failed: %d\n", rc1);
+        exit(1);
+    }
 
+    // create consumer thread
+    rc2 = pthread_create(&idC, NULL, Consume, NULL);
+    if (rc2)
+    {
+        printf("Thread creation failed: %d\n", rc2);
+        exit(1);
+    }
+
+    // synchronize threads (join them)
+    pthread_join(idP, NULL);
+    pthread_join(idC, NULL);
+
+    // destroy semaphores
+    sem_destroy(&FullPositions);
+    sem_destroy(&EmptyPositions);
+    sem_destroy(&BufferLock);
+
+    printf("Exiting program\n");
     return 0;
 }

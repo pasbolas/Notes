@@ -13,6 +13,7 @@ void  ParentProcess(void);               /* parent process prototype */
 void  main(void)
 {
      pid_t  pid;
+     int status;
 
      pid = fork();
      if (pid == 0) 
@@ -20,8 +21,8 @@ void  main(void)
      else 
 	 {
           ParentProcess();
-		  pid = wait(&status);
-		  printf("the parent has been woken by process %d\n", pid);
+          pid = wait(&status);
+          printf("the parent has been woken by process %d\n", pid);
 	 }	  
 }
 

@@ -52,6 +52,7 @@ int main (int argc, char *argv[])
 
    /* Free attribute and wait for the other threads */
    pthread_attr_destroy(&attr);
+   
    for(t=0; t<NUM_THREADS; t++) {
       rc = pthread_join(thread[t], &status);
       if (rc) {

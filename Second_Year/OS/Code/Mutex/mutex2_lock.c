@@ -14,7 +14,7 @@
 
 pthread_t tid[2];
 int counter;
-pthread_mutex_t lock;
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 void* doSomeThing(void *arg)
 {
@@ -29,7 +29,6 @@ void* doSomeThing(void *arg)
     printf("\n Job %d finished\n", counter);
 
     pthread_mutex_unlock(&lock);  // unlock the mutex now other thread can proceed
-
     return NULL;
 }
 
@@ -37,13 +36,6 @@ int main(void)
 {
     int i = 0;
     int err;
-	
-
-    if (pthread_mutex_init(&lock, NULL) != 0)     // declare the lock variable
-    {
-        printf("\n mutex init failed\n");
-        return 1;
-    }
 
     while(i < 2)
     {

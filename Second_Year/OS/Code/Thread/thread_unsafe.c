@@ -37,11 +37,17 @@ int main(int argc, char *argv[])
 		// for(i=0;i<MAX; i++);
 		//  for(i=0; i<10000; i++);
 
-		if (rc) 
+		if (rc != 0) 
 		{
-			printf("ERROR; return code from pthread_create() is %d\n", rc);
+			printf("Properly created thread %ld\n", t);
 			exit(-1);
 		}
+		else
+		{
+			printf("Error creating thread %ld\n", t);
+		}
    }
+
+   return 0;
 
 }

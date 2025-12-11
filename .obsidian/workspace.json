@@ -11,14 +11,12 @@
             "id": "39efec188b6f40f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Second_Year/Peer Tutoring/Web Dev/CMPU1031_Answers.md",
-                "mode": "source",
-                "source": false
+                "file": "Second_Year/OS/Operating System Exam Paper 2024_25 Solution.pdf"
               },
-              "icon": "lucide-file",
-              "title": "CMPU1031_Answers"
+              "icon": "lucide-file-text",
+              "title": "Operating System Exam Paper 2024_25 Solution"
             }
           }
         ]
@@ -78,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 228.51103591918945
   },
   "right": {
     "id": "565127e89e2c0a96",
@@ -185,9 +183,22 @@
   },
   "active": "39efec188b6f40f3",
   "lastOpenFiles": [
-    "Second_Year/Peer Tutoring/Web Dev/CMPU 1031WD1.pdf",
-    "Second_Year/Peer Tutoring/Web Dev/CMPU1031_Answers.md",
-    "Second_Year/OS/Code/Mutex/goodcnt",
-    "Second_Year/Peer Tutoring/Web Dev"
+    "Second_Year/OS/24-25.pdf",
+    "Second_Year/Software Engineering/23-24.pdf",
+    "Second_Year/Software Engineering/24-25.pdf",
+    "Linux/Directories.md",
+    "Second_Year/Software Engineering/22-23.pdf",
+    "Linux",
+    "Second_Year/Software Engineering/discord-0.0.118.deb",
+    "Second_Year/Software Engineering/Unconfirmed 584537.crdownload",
+    "Second_Year/Web Dev 2/web-dev-exam-solutions.md",
+    "Second_Year/Web Dev 2/24-25.pdf",
+    "Second_Year/Software Engineering/19-20.pdf",
+    "Second_Year/Software Engineering/Unconfirmed 300648.crdownload",
+    "Second_Year/OS/week 9.md",
+    "Second_Year/OS/Stack.md",
+    "Second_Year/OS/Exam Paper Discussion.md",
+    "Second_Year/OS/CMPU2017_OS2_Exam_Solutions.md",
+    "Second_Year/Peer Tutoring/Web Dev/CMPU1031_Answers.md"
   ]
 }

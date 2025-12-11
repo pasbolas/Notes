@@ -12,16 +12,18 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <sys/types.h>
 
 int main(int argc, char **argv)
 {
     printf("--beginning of program\n");
 
-   if (argc != 3) {
-	printf("number of command line arguments should be 3\n");
-	printf("exiting program......\n");	
-	exit(0);
+   if (argc != 3) 
+   {
+        printf("number of command line arguments should be 3\n");
+        printf("exiting program......\n");	
+        exit(0);
     }
 
 
@@ -33,11 +35,9 @@ int main(int argc, char **argv)
     if (pid == 0)
     {
         // child process
+        int max_c = atoi(argv[1]);   
 
-	
-	int max_c = atoi(argv[1]);   
-
-	printf("the second argument is %s\n",argv[1]);
+        printf("the second argument is %s\n",argv[1]);
         int i,x;
         for (i = 0; i < 5; ++i)
         {
@@ -50,14 +50,14 @@ int main(int argc, char **argv)
         // parent process
         int j,x, status;
 	
-	int  max_p = atoi(argv[2]);
+        int  max_p = atoi(argv[2]);
 
-	printf("the third argument is %s\n",argv[2]);
-	//pid = wait(&status);
+        printf("the third argument is %s\n",argv[2]);
+        //pid = wait(&status);
         for (j=0; j < 5; ++j)
-	{
+	    {
             printf("parent process: counter=%d\n", ++counter);
-	    for (x=0;x<max_p;x++);	
+            for (x=0;x<max_p;x++);	
         }
     }
     else

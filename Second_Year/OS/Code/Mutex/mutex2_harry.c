@@ -1,10 +1,6 @@
 /* 
-
     edited version of denis''s first mutex2 file
-    
 */
-
-
 
 #include<stdio.h>
 #include<string.h>
@@ -22,13 +18,20 @@ void* doSomeThing()
 
     //mutex is locked
     pthread_mutex_lock(&mutex1);
+
     printf("--MUTEX LOCKED--\n");
-    counter += 1;
+
+    
+
     printf("\n Job %d started\n", counter);
 
-    //for(i=0; i<(0xFFFFFFFF);i++);
-    printf("\n Job %d finished\n", counter);
+    counter += 1;
+
     pthread_mutex_unlock(&mutex1);
+
+    for(i=0; i<(0xFFFFFFFF);i++);
+
+    printf("\n Job %d finished\n", counter);
     printf("--MUTEX UNLOCKED--\n");
     return NULL;
 }

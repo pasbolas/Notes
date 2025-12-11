@@ -43,10 +43,10 @@ void  ParentProcess(void)
      int   i;
 	
 	pid_t  pid;
-	 int status;	
+	int status;	
 	 
      //sleep(1);    // the parent is put to sleep for 1 sec 
-    pid = wait(&status);  // parent will wait for the child 
+     pid = wait(&status);  // parent will wait for the child 
  	 
      for (i = 1; i <= MAX_COUNT; i++)
           printf("This line is from parent, value = %d\n", i);

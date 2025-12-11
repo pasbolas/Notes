@@ -18,20 +18,20 @@ void  ParentProcess(void);               /* parent process prototype */
 
 void  main(void)
 {
-     pid_t  pid;
+     pid_t  pid1;
 
-     pid = fork();  // fork creates a copy of the current process 
+     pid1 = fork();  // fork creates a copy of the current process 
         
-     if (pid < 0)
+     if (pid1 < 0)
 	printf("error unable to fork process; ending program");
     
-     if (pid == 0)
+     if (pid1 == 0)
      {
           ChildProcess();
      }   
      else 
      {	
-         printf("the fork command returns the PID of the child: %d\n",pid);
+         printf("the fork command returns the PID of the child: %d\n",pid1);
          ParentProcess();
      }	
 }

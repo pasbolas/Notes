@@ -26,7 +26,10 @@ void  ChildProcess(void)
      int   i;
 
      for (i = 1; i <= MAX_COUNT; i++)
+     {
           printf("   This line is from child, value = %d\n", i);
+     }
+          
      printf("   *** Child process is done ***\n");
 }
 

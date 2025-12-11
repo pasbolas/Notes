@@ -29,7 +29,7 @@ int main (int argc, char *argv[])
 
 	/* create the thread */
 
-	retcode = pthread_create(&tid, NULL, my_thread, argv[2]);
+	retcode = pthread_create(&tid, NULL, my_thread,(void *)1);
 	
 	if (retcode != 0) 
 	{
@@ -52,13 +52,16 @@ int main (int argc, char *argv[])
 
 void *my_thread(void *Child)
 {
+       
+	printf("\nEntered Thread, Converting Child pointer to a string!");
+	char *arg = (char *)Child;
+	printf("\nConverting string to int");
+	// int i = atoi(arg);
 
-        
-	int i = atoi(Child);
 
-	printf ("I am the child thread and was passed value %d\n", i);
+	// printf ("I am the child thread and was passed value %d\n", i);
 	
-	value = i*i*i;
+	// value = i*i*i;
 
 	/* next line is not really necessary */
 	pthread_exit(0);

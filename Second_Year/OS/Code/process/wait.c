@@ -2,7 +2,7 @@
 
 
 #include  <stdio.h>
-#include<unistd.h>
+#include  <unistd.h>
 #include  <sys/types.h>
 
 #define   MAX_COUNT  200
@@ -42,7 +42,7 @@ void  ParentProcess(void)
 	 int status;	
 	 
      //sleep(1);    // the parent is put to sleep for 1 sec 
-    pid = wait(&status);  // parent will wait for the child 
+     pid = wait(&status);  // parent will wait for the child 
  	 
      for (i = 1; i <= MAX_COUNT; i++)
           printf("This line is from parent, value = %d\n", i);
