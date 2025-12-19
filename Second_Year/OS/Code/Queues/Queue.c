@@ -83,18 +83,20 @@ void instructions(void)
 void enqueue(QueueNode* *hPtr, QueueNode* *tPtr, char value)
 { 
    QueueNode* newPtr; 
-    
-    newPtr= malloc(sizeof(QueueNode));
+   newPtr= malloc(sizeof(QueueNode));
 
-   if (newPtr != NULL) { // is space available 
+   if (newPtr != NULL) // is space available 
+   { 
       newPtr->data = value;
       newPtr->nextPtr = NULL;
 
       // if empty, insert node at head
-      if (*hPtr == NULL) {
+      if (*hPtr == NULL) 
+      {
         *hPtr = newPtr;
       } 
-      else {
+      else 
+      {
          (*tPtr)->nextPtr = newPtr;
       } 
 
@@ -104,9 +106,6 @@ void enqueue(QueueNode* *hPtr, QueueNode* *tPtr, char value)
       printf("\tthe contents of headPtr after adding a node  is: %p\n",*hPtr);
       printf("\tthe contents of tailPtr after adding a node is: %p\n",*tPtr); 
       	
-
-
-
    } 
    else {
 

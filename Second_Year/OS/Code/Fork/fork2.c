@@ -23,22 +23,27 @@ void  main(void)
           ChildProcess();
      else 
           ParentProcess();
+     
+     printf("%d", pid);
+     
+     printf("   *** Process %d is done ***\n", getpid());
 }
 
 void  ChildProcess(void)
 {
-     int   i;
 
-     for (i = 1; i <= MAX_COUNT; i++){
+     int   i;
+     for (i = 1; i <= MAX_COUNT; i++)
+	{
           printf("   This line is from child, value = %d\n", i);
-     }
+     	}
      printf("   *** Child process is done ***\n");
 }
 
 void  ParentProcess(void)
 {
      int   i;
-	sleep(2); // puts the parent to sleep to ensure that the child will finish processing 
+	//sleep(2); // puts the parent to sleep to ensure that the child will finish processing 
 
      for (i = 1; i <= MAX_COUNT; i++)
      {

@@ -40,8 +40,8 @@ void  ChildProcess(void)
 {
      int   i,x, pid1, pid2;
      
-     pid1 = getpid();    // get PID of the parent process
-     pid2 = getppid();   // get the grand parent of the process	
+     pid1 = getpid();    // get PID of the child process id
+     pid2 = getppid();   // get the parent process id
 
      for (i = 1; i <= MAX_COUNT; i++)
      {
