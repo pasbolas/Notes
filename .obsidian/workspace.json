@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Second_Year/Web Dev 2/L3.2 - PHP intro.pdf"
+                "file": "Second_Year/Databases/2024-25.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "L3.2 - PHP intro"
+              "title": "2024-25"
             }
           }
         ]
@@ -76,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228.51103591918945
+    "width": 200
   },
   "right": {
     "id": "565127e89e2c0a96",
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Second_Year/Peer Tutoring/Web Dev/CMPU1031_Answers.md",
+                "file": "Second_Year/Web Dev 2/L7 -MySQLPHP.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CMPU1031_Answers"
+              "title": "Backlinks for L7 -MySQLPHP"
             }
           },
           {
@@ -183,23 +183,25 @@
   },
   "active": "39efec188b6f40f3",
   "lastOpenFiles": [
-    "Second_Year/Web Dev 2/23-24.pdf",
+    "Second_Year/Databases/Week 6 - Group functions.pdf",
+    "Second_Year/Databases/Lecture 5 - Number and date functions.pdf",
+    "Second_Year/Databases/Week 5 - Character functions.pdf",
+    "Second_Year/Databases/2024-25.pdf",
+    "Second_Year/Databases/Week 5 - Character functions 1.pptx",
+    "Second_Year/Databases/Week 5 - Character functions.pptx",
+    "Second_Year/Maths/24-25.pdf",
+    "Second_Year/Maths/Graph Theory.pdf",
+    "Second_Year/Databases/CMPU2007_Databases_Study_Material.md",
+    "Second_Year/Maths/Number Theory.pdf",
+    "Second_Year/Maths/23-24.pdf",
+    "Second_Year/Maths/Probability & Statistics.pdf",
+    "Second_Year/Maths/Topics.md",
     "Second_Year/Web Dev 2/web-dev-exam-solutions.md",
-    "Second_Year/Web Dev 2/L10 -XML.pdf",
-    "Second_Year/Web Dev 2/24-25.pdf",
-    "Second_Year/Web Dev 2/L9 -SessionPHP.pdf",
-    "Second_Year/Web Dev 2/L8.2 -WebLifeCircle.pdf",
-    "Second_Year/Web Dev 2/L2 Client Server.pdf",
-    "Second_Year/Web Dev 2/L1.2 Internet.pdf",
-    "Second_Year/Web Dev 2/L3.1 Web Servers.pdf",
-    "Second_Year/Web Dev 2/LN0 - Intro.pdf",
-    "Second_Year/Web Dev 2/Table of Contents.html",
     "Second_Year/oop/java_notes_qna.md",
     "Second_Year/Peer Tutoring/Web Dev/DOM.md",
     "Second_Year/OS/Exam Paper Discussion.md",
     "Second_Year/OS/week 9.md",
     "Second_Year/Databases/Revision Notes.md",
-    "Second_Year/Databases/CMPU2007_Databases_Study_Material.md",
     "Second_Year/OS/Stack.md",
     "Second_Year/OS/CMPU2017_OS2_Exam_Solutions.md",
     "Linux/Directories.md",
