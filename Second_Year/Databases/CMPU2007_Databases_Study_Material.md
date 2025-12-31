@@ -111,6 +111,7 @@ SELECT UserID, COALESCE(Email, 'Unknown') AS Email FROM User;
 | 1NF         | Atomic attributes only   | Split multivalued fields into new rows |
 | 2NF         | No partial dependency    | Move attributes to new table           |
 | 3NF         | No transitive dependency | Remove derived attributes              |
+|             |                          |                                        |
 
 ---
 
