@@ -8,15 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "39efec188b6f40f3",
+            "id": "684ecfc3fd9c20a6",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Second_Year/Databases/w5-characters.pdf"
+                "file": "Second_Year/Databases/Private Notes/Functions Too.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "w5-characters"
+              "icon": "lucide-file",
+              "title": "Functions Too"
+            }
+          },
+          {
+            "id": "21a1f0b6ae5272e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Second_Year/Databases/Private Notes/Functions Too.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Functions Too"
             }
           }
         ]
@@ -76,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300.0999984741211
   },
   "right": {
     "id": "565127e89e2c0a96",
@@ -181,20 +197,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "39efec188b6f40f3",
+  "active": "684ecfc3fd9c20a6",
   "lastOpenFiles": [
-    "Second_Year/Databases/CMPU2007_Databases_Study_Material.md",
+    "Second_Year/Databases/Private Notes/Character Functions.md",
+    "Second_Year/Databases/Notes/w6.1.pdf",
+    "Second_Year/Databases/Notes/w6.2-group.pdf",
+    "Second_Year/Databases/Private Notes/Functions Too.md",
+    "Second_Year/Databases/Notes/w5-characters.pdf",
+    "Untitled 1.md",
+    "Second_Year/Databases/Private Notes",
+    "Second_Year/Databases/24-25-Solution.md",
+    "Second_Year/Databases/24-25.pdf",
+    "Second_Year/Databases/23-24-solution.md",
+    "Untitled.md",
+    "Second_Year/Databases/23-24.pdf",
+    "Second_Year/Databases/22-23.pdf",
+    "Second_Year/Databases/22-23-Solution.md",
+    "22-23-solution.md",
+    "Second_Year/Databases/Notes/w8.pdf",
+    "Second_Year/Databases/Notes/CMPU2007_Databases_Study_Material.md",
+    "Second_Year/Databases/Notes",
     "Second_Year/Databases/Revision Notes.md",
-    "Second_Year/Databases/w5-characters.pdf",
-    "Second_Year/Databases/w6.1.pdf",
-    "Second_Year/Databases/w6.2-group.pdf",
-    "Second_Year/Databases/24-25 (2).pdf",
-    "Second_Year/Databases/23-24 (2).pdf",
     "Second_Year/Databases/2024-25.pdf",
-    "Second_Year/Software Engineering/22-23.pdf",
-    "Second_Year/Software Engineering/23-24.pdf",
-    "Second_Year/Software Engineering/24-25.pdf",
-    "Second_Year/Web Dev 2/L3.1 Web Servers.pdf",
     "Second_Year/OS/CMPU2017_OS2_Exam_Solutions.md",
     "Second_Year/OS/Exam Paper Discussion.md",
     "Second_Year/Maths/Topics.md",
