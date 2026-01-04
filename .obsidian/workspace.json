@@ -25,17 +25,28 @@
             "id": "21a1f0b6ae5272e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Second_Year/Databases/Private Notes/Functions Too.md",
-                "mode": "source",
-                "source": false
+                "file": "Second_Year/Maths/Graph Theory.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Functions Too"
+              "icon": "lucide-file-text",
+              "title": "Graph Theory"
+            }
+          },
+          {
+            "id": "793286fd201b3e22",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Second_Year/Databases/Notes/Week 9 - Normalisation.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Week 9 - Normalisation"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -197,36 +208,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "684ecfc3fd9c20a6",
+  "active": "793286fd201b3e22",
   "lastOpenFiles": [
-    "Second_Year/Databases/Private Notes/Character Functions.md",
-    "Second_Year/Databases/Notes/w6.1.pdf",
-    "Second_Year/Databases/Notes/w6.2-group.pdf",
-    "Second_Year/Databases/Private Notes/Functions Too.md",
-    "Second_Year/Databases/Notes/w5-characters.pdf",
-    "Untitled 1.md",
-    "Second_Year/Databases/Private Notes",
-    "Second_Year/Databases/24-25-Solution.md",
     "Second_Year/Databases/24-25.pdf",
     "Second_Year/Databases/23-24-solution.md",
-    "Untitled.md",
-    "Second_Year/Databases/23-24.pdf",
+    "Second_Year/Databases/Private Notes/Alter Table Syntaxes.md",
+    "Second_Year/Databases/Private Notes/Constraints.md",
     "Second_Year/Databases/22-23.pdf",
+    "Second_Year/Databases/23-24.pdf",
     "Second_Year/Databases/22-23-Solution.md",
-    "22-23-solution.md",
+    "Second_Year/Databases/Private Notes/Functions Too.md",
+    "Second_Year/Databases/Private Notes/Character Functions.md",
     "Second_Year/Databases/Notes/w8.pdf",
+    "Second_Year/Databases/Notes/Week 9 - Normalisation.pdf",
+    "Second_Year/Databases/Notes/w6.2-group.pdf",
     "Second_Year/Databases/Notes/CMPU2007_Databases_Study_Material.md",
-    "Second_Year/Databases/Notes",
-    "Second_Year/Databases/Revision Notes.md",
-    "Second_Year/Databases/2024-25.pdf",
-    "Second_Year/OS/CMPU2017_OS2_Exam_Solutions.md",
+    "Second_Year/Databases/Notes/w5-characters.pdf",
+    "Second_Year/Maths/Predicate Logic.md",
+    "Untitled 2.md",
+    "Second_Year/Maths/Graph Theory.pdf",
+    "Second_Year/Maths/Probability & Statistics.pdf",
+    "Second_Year/Maths/23-24.pdf",
     "Second_Year/OS/Exam Paper Discussion.md",
+    "Second_Year/OS/Stack.md",
+    "Untitled 1.md",
+    "Second_Year/Databases/24-25-Solution.md",
+    "Untitled.md",
+    "22-23-solution.md",
+    "Second_Year/Databases/Revision Notes.md",
+    "Second_Year/OS/CMPU2017_OS2_Exam_Solutions.md",
     "Second_Year/Maths/Topics.md",
     "Second_Year/Web Dev 2/web-dev-exam-solutions.md",
     "Second_Year/oop/java_notes_qna.md",
     "Second_Year/Peer Tutoring/Web Dev/DOM.md",
     "Second_Year/OS/week 9.md",
-    "Second_Year/OS/Stack.md",
     "Linux/Directories.md",
     "Second_Year/Peer Tutoring/Web Dev/CMPU1031_Answers.md"
   ]
