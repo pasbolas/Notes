@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
     "zoom"
-  ]
+  ],
+  "theme": "obsidian",
+  "cssTheme": "Primary"
 }
